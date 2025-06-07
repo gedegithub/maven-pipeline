@@ -44,7 +44,14 @@ pipeline {
         stage('Analyse') {
             steps {
                 sh 'mvn checkstyle:checkstyle'
-                publishHTML([reportDir: 'target/site', reportFiles: 'checkstyle.html', reportName: 'Checkstyle'])
+                publishHTML(target: [
+                    reportDir: 'target/site',
+                    reportFiles: 'checkstyle.html',
+                    reportName: 'Checkstyle',
+                    allowMissing: false,
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true
+                ])
             }
         }
     }
