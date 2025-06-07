@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        JAVA_HOME = 'usr/bin/java'
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64/'
         MAVEN_HOME = '/opt/apache-maven-3.9.9'
         PATH = "${env.PATH}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:/usr/bin"
         //PYTHON_HOME = 'usr/bin/python3'
