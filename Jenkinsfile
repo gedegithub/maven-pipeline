@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 //git url: 'https://github.com/gedegithub/maven-pipeline.git'
-                git branch: "${params.BRANCH_NAME}", url: 'https://github.com/votre-utilisateur/votre-repo.git'
+                git branch: "${params.BRANCH_NAME}", url: 'https://github.com/gedegithub/maven-pipeline.git'
             }
         }
         stage('Build') {
