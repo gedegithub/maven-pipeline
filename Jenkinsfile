@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         JAVA_HOME = 'usr/bin/java'
-        MAVEN_HOME = '/apache-maven-3.9.9'
-        PATH = "${env.PATH}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:/usr/bin"
+        MAVEN_HOME = '/apache-maven-3.9.9/bin/mvn'
+        PATH = "${env.PATH}:${JAVA_HOME}/bin:${MAVEN_HOME}:/usr/bin"
         //PYTHON_HOME = 'usr/bin/python3'
     }
     parameters {
